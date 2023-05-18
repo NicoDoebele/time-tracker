@@ -5,9 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +13,6 @@ public class Person {
     
     @Id
     @GeneratedValue
-    @JsonProperty(access = Access.READ_ONLY)
     private Long id;
 
     private String firstName;
