@@ -1,5 +1,7 @@
 # time-tracker
 
+The Time Tracker Project is a web application that helps users effectively manage their time and improve productivity. It features a Java Spring backend and an Angular frontend for a seamless user experience. Users can create shifts and log in when they start working and log out when they finish. The application allows for better organization and tracking of shifts, enabling users to optimize their work schedules and enhance their time management skills.
+
 ### Start Server
 ```bash
 cd server
