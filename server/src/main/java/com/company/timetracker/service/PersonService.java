@@ -15,7 +15,7 @@ public class PersonService{
     @Autowired
     private PersonRepository personRepository;
 
-    public List<Person> getShiftList(){
+    public List<Person> getAllPersons(){
         return personRepository.findAll();
     }
 
