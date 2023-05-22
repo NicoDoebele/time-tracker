@@ -32,12 +32,12 @@ public class ShiftController{
     }
 
     @GetMapping("/shifts/{id}")
-    public Shift getPersonById(@PathVariable String id){
+    public Shift getShiftById(@PathVariable String id){
         return shiftService.getShiftById(Long.parseLong(id));
     }
 
     @DeleteMapping("/shifts/{id}")
-    public void deletePerson(@PathVariable String id){
+    public void deleteShift(@PathVariable String id){
         shiftService.deleteShift(Long.parseLong(id));
     }
 
@@ -47,8 +47,12 @@ public class ShiftController{
     }
 
     @PutMapping("/shifts/{id}")
-    public Shift updatePerson(@PathVariable String id, @RequestBody Shift shift){
+    public Shift updateShift(@PathVariable String id, @RequestBody Shift shift){
         return shiftService.updateShift(shift, Long.parseLong(id));
     }
 
+    @GetMapping("/shifts/{personId}/active")
+    public long getActiveShift(@PathVariable String personId) {
+        return 0;
+    }
 }
