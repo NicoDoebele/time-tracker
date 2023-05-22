@@ -55,4 +55,5 @@ public class ShiftController{
     public long getActiveShift(@PathVariable String personId) {
         return 0;
     }
+
 }
