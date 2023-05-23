@@ -50,10 +50,4 @@ public class ShiftController{
     public Shift updateShift(@PathVariable String id, @RequestBody Shift shift){
         return shiftService.updateShift(shift, Long.parseLong(id));
     }
-
-    @GetMapping("/shifts/{personId}/active")
-    public long getActiveShift(@PathVariable String personId) {
-        return 0;
-    }
-
 }
