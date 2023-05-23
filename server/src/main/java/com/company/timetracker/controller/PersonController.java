@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.company.timetracker.domain.Person;
-import com.company.timetracker.domain.Shift;
 import com.company.timetracker.service.PersonService;
 
 /**
@@ -35,21 +34,6 @@ public class PersonController{
     @GetMapping("/persons/{id}")
     public Person getPersonById(@PathVariable String id){
         return personService.getPersonById(Long.parseLong(id));
-    }
-
-    @GetMapping("/persons/{id}/shifts")
-    public List<Shift> getShiftsByPersonId(@PathVariable String id){
-        Person person = personService.getPersonById(Long.parseLong(id));
-
-        return person.getShiftList();
-    }
-
-    @GetMapping("/persons/{id}/shifts/latest")
-    public Shift getActiveShiftByPersonId(@PathVariable String id){
-        Person person = personService.getPersonById(Long.parseLong(id));
-        List<Shift> shiftList = person.getShiftList();
-
-        return shiftList.get(shiftList.size()-1);
     }
 
     @DeleteMapping("/persons/{id}")
